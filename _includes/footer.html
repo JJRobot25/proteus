@@ -1,0 +1,16 @@
+<footer>
+    <div>
+        {% if page.tb %}
+            Tekstboek: p. {{page.tb}}
+            <br><br>
+        {%endif%}
+        {% if page.hbnr and page.hb%}
+            Hulpboek {{page.hbnr}}: p. {{page.hb}}
+        {%endif%}
+
+    </div>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script src="/assets/js/topButton.js"></script>
+</footer>

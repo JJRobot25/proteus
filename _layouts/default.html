@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <head>
+        <meta charset="utf-8">
+        <title>{{page.title}}</title>
+
+        <link rel="stylesheet" href="/assets/css/main.css">
+        <link rel="stylesheet" href="/assets/css/navbar.css">
+        <link rel="stylesheet" href="/assets/css/footer.css">
+        <link rel="stylesheet" href="/assets/css/table.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Modern+Antiqua|Newsreader|Gentium+Plus">
+    </head>
+    <body>
+        {% include nav.html %}
+        <h1>{{page.title}}</h1>
+        {{ content }}
+        <br><br><br>
+        {% include footer.html %}
+    </body>
+</head>

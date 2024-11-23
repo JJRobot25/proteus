@@ -1,0 +1,33 @@
+table {
+    font-size: 15px;
+    color: black;
+    background-color: var(--table-color);
+}
+caption {
+    color: white;
+    font-weight: bold;
+    background-color: var(--table-color);
+    color: white;
+    padding: 3px 3px 0px;
+}
+th, td {
+    background-color: white;
+    width: 120px;
+    
+    padding-left: 5px;
+}
+table .blank {
+    background-color: var(--bg-color);
+}
+table .dark {
+    color: white;
+    background-color: var(--table-color);
+}
+table span {
+    color: var(--table-color);
+}
+
+table span.i {
+    font-style: italic;
+}
+
