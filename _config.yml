@@ -1,3 +1,6 @@
+baseurl: "/greek-website"
+url: "https://jjrobot25.github.io/"
+
 defaults:
   -
     scope:
