@@ -122,7 +122,7 @@ function replaceLetters(input) {
             }
 
             function sigmaSigmaOnTheWall(nextChar) {
-                const whoIsTheSkibidiestOfThemAll = [' ', ',', '.', ')']
+                const whoIsTheSkibidiestOfThemAll = [' ', ',', '.', ')', '-']
                 if (whoIsTheSkibidiestOfThemAll.includes(nextChar) || (input.length -1) == i) {
                     toReturn += 'ς'
                 } else {
