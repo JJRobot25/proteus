@@ -7,7 +7,6 @@ body {
     --nav-color: #806C02;
     --nav-accent-color: #02806C;
     --table-color: #ac4d04;
-    --link-color: #1d42ff;
 
     background-color: var(--bg-color);
     /*https://www.canva.com/colors/color-wheel/*/
@@ -20,12 +19,17 @@ body, .dropdown-content {
 h1, h2, h3, h4, nav {
     font-family: "Modern Antiqua", "Gentium Plus", system-ui;
 }
+
+/* Links */
 a {
-    color: var(--link-color);
-}
-a:hover {
+    color: #1d42ff;
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dikke scheidingsstreep */ 
 hr {
     height:3px;
     border-width:0;

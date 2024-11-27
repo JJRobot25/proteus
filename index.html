@@ -1,4 +1,31 @@
 ---
+layout: nofooternotitle
 title: Home
 ---
+<h1>Welkom!</h1>
 <img src="{{'/assets/images/bonjour.jpg' | relative_url}}" height="400px" alt="Bonjour!">
+
+<!--
+Voor anderen die ook zo'n website willen:
+De website is gehost op GitHub Pages (https://pages.github.com/).
+GH Pages heeft built-in support Jekyll, een static site generator.
+Daarom is de website gemaakt met Jekyll (https://jekyllrb.com/)
+
+1. Installeer Ruby: https://jekyllrb.com/docs/installation/windows/
+2. Maak website
+    Op basis van deze: 
+        1. Fork de repo: https://github.com/JJRobot25/greek-website
+        2. Open in gh desktop en edit met vs code
+    Of zelf: ga naar https://jekyllrb.com/docs/step-by-step/01-setup/
+3. Om website te zien:
+    1. Open terminal en ga naar folder van website (> cd folder1/folder2/website)
+    2. > bundle exec jekyll serve
+    3. ga naar http://localhost:4000/
+4. Om website te hosten:
+    1. Ga naar je github repo
+    2. ga naar settings -> pages
+    3. Deploy from branch -> main/(root)
+
+Pro tip: gebruik voor links binnen de website "{{'/page/page2' | relative_url}}" ipv "/page/page2", 
+    anders is gh pages in de war en kloppen de links niet, ook van de assets (css en js)
+-->

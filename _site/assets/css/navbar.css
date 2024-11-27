@@ -29,6 +29,7 @@ nav a {
 /* Color the navbar buttons differently on hover */
 nav a:hover, .dropdown:hover .dropbtn {
     background-color: var(--nav-accent-color);
+    text-decoration: none;
 }
 /* Dropdown content (hidden by default) */
 .dropdown-content {

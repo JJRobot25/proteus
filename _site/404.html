@@ -1,3 +1,6 @@
+<!-- Layout voor de homepage en de 404 pagina -->
+<!-- Gecentered -->
+ 
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,7 +15,27 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Modern+Antiqua|Newsreader|Gentium+Plus">
     </head>
     <body>
-        <nav id="topnav" class="topnav">
+        <!-- Dit is de navbar aan de bovenkant van iedere pagina.
+
+    Normale link: 
+    <a href="/link">Link</a>
+
+    Dropdown: 
+    <div class="dropdown">
+        <button class="dropbtn">
+            Dropdown naam <b style="font-size: 0.8em;">▼</b>
+        </button>
+        <div class="dropdown-content">
+            <a href="/link1">Link 1</a>
+            <a href="/link2">Link 2</a>
+            <a href="/link3">Link 3</a>
+        </div>
+    </div>
+-->
+
+<!-- Van https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp, de 'responsive' kwam later -->
+
+<nav id="topnav" class="topnav">
     <a href="/">Home</a>
     <a href="/over">Over</a>
 
@@ -53,12 +76,12 @@
 
     <script src="/assets/js/navbar.js"></script>
 </nav>
-        <div style="
-    margin: auto;
-    text-align: center;">
-    <h1>404</h1>
-    <p>Page not found :-(</p>
-    <img src="/assets/images/crying.gif" height="400px" alt="crying">
-</div>
+        <div style="margin: auto; text-align: center;">
+            <h1>404</h1>
+<p>Page not found :-(</p>
+<img src="/assets/images/crying.gif" height="400px" alt="crying">
+
+        </div>
+        
     </body>
 </html>
