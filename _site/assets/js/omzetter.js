@@ -26,108 +26,174 @@ function replaceLetters(input) {
             // Sigma final form
             case 's': sigmaSigmaOnTheWall(input[i+1]); break;
 
+            case '+': plus(); break;
+
+            case '-': type(); break;
+
+            case '*': ending(); break;
+
+            case '\\': escape(input[i+1]); break;
+
             // Turn into equivalent Greek letter (from letterMap), or stay the same if no match is present
             default:
                 if (letterMap.has(currentChar)) {
-                    toReturn += letterMap.get(currentChar);
+                    toRet(letterMap.get(currentChar));
                 } else {
-                    toReturn += currentChar;
+                    toRet(currentChar);
                 }
                 break;
             
             function spiritusAsper(nextChar) { // (hard breathing)
                 switch (nextChar) {
-                    case 'A': toReturn += 'Ἁ'; i++; break;
-                    case 'Ã': toReturn += 'ᾉ'; i++; break;
-                    case 'E': toReturn += 'Ἑ'; i++; break;
-                    case 'H': toReturn += 'Ἡ'; i++; break;
-                    case 'I': toReturn += 'Ἱ'; i++; break;
-                    case 'O': toReturn += 'Ὁ'; i++; break;
-                    case 'R': toReturn += 'Ῥ'; i++; break;
-                    case 'U': toReturn += 'Ὑ'; i++; break;
-                    case 'W': toReturn += 'Ὡ'; i++; break;
-                    case 'a': toReturn += 'ἁ'; i++; break;
-                    case 'ã': toReturn += 'ᾁ'; i++; break;
-                    case 'e': toReturn += 'ἑ'; i++; break;
-                    case 'h': toReturn += 'ἡ'; i++; break;
-                    case 'i': toReturn += 'ἱ'; i++; break;
-                    case 'o': toReturn += 'ὁ'; i++; break;
-                    case 'r': toReturn += 'ῥ'; i++; break;
-                    case 'u': toReturn += 'ὑ'; i++; break;
-                    case 'w': toReturn += 'ὡ'; i++; break;
+                    case 'A': toRet('Ἁ'); i++; break;
+                    case 'Ã': toRet('ᾉ'); i++; break;
+                    case 'E': toRet('Ἑ'); i++; break;
+                    case 'H': toRet('Ἡ'); i++; break;
+                    case 'I': toRet('Ἱ'); i++; break;
+                    case 'O': toRet('Ὁ'); i++; break;
+                    case 'R': toRet('Ῥ'); i++; break;
+                    case 'U': toRet('Ὑ'); i++; break;
+                    case 'W': toRet('Ὡ'); i++; break;
+                    case 'a': toRet('ἁ'); i++; break;
+                    case 'ã': toRet('ᾁ'); i++; break;
+                    case 'e': toRet('ἑ'); i++; break;
+                    case 'h': toRet('ἡ'); i++; break;
+                    case 'i': toRet('ἱ'); i++; break;
+                    case 'o': toRet('ὁ'); i++; break;
+                    case 'r': toRet('ῥ'); i++; break;
+                    case 'u': toRet('ὑ'); i++; break;
+                    case 'w': toRet('ὡ'); i++; break;
                     case '~': i++; iotaSubWithAsper(input[i+1]); break;
-                    default: toReturn += "'";
+                    default: toRet("'");
                 }
             }
             function spiritusLenis(nextChar) { // (soft breathing)
                 switch (nextChar) {
-                    case 'A': toReturn += 'Ἀ'; i++; break;
-                    case 'Ã': toReturn += 'ᾈ'; i++; break;
-                    case 'E': toReturn += 'Ἐ'; i++; break;
-                    case 'H': toReturn += 'Ἠ'; i++; break;
-                    case 'I': toReturn += 'Ἰ'; i++; break;
-                    case 'O': toReturn += 'Ὀ'; i++; break;
-                    case 'U': toReturn += '?'; i++; break;
-                    case 'W': toReturn += 'Ὠ'; i++; break;
-                    case 'a': toReturn += 'ἀ'; i++; break;
-                    case 'ã': toReturn += 'ᾀ'; i++; break;
-                    case 'e': toReturn += 'ἐ'; i++; break;
-                    case 'h': toReturn += 'ἠ'; i++; break;
-                    case 'i': toReturn += 'ἰ'; i++; break;
-                    case 'o': toReturn += 'ὀ'; i++; break;
-                    case 'u': toReturn += 'ὐ'; i++; break;
-                    case 'w': toReturn += 'ὠ'; i++; break;
+                    case 'A': toRet('Ἀ'); i++; break;
+                    case 'Ã': toRet('ᾈ'); i++; break;
+                    case 'E': toRet('Ἐ'); i++; break;
+                    case 'H': toRet('Ἠ'); i++; break;
+                    case 'I': toRet('Ἰ'); i++; break;
+                    case 'O': toRet('Ὀ'); i++; break;
+                    case 'U': toRet('?'); i++; break;
+                    case 'W': toRet('Ὠ'); i++; break;
+                    case 'a': toRet('ἀ'); i++; break;
+                    case 'ã': toRet('ᾀ'); i++; break;
+                    case 'e': toRet('ἐ'); i++; break;
+                    case 'h': toRet('ἠ'); i++; break;
+                    case 'i': toRet('ἰ'); i++; break;
+                    case 'o': toRet('ὀ'); i++; break;
+                    case 'u': toRet('ὐ'); i++; break;
+                    case 'w': toRet('ὠ'); i++; break;
                     case '~': i++; iotaSubWithLenis(input[i+1]); break;
-                    default: toReturn += "`";
+                    default: toRet("`");
                 }
             }
             function iotaSub(nextChar) {
                 switch (nextChar) {
-                    case 'A': toReturn += 'ᾼ'; i++; break;
-                    case 'Á': toReturn += 'ᾉ'; i++; break;
-                    case 'À': toReturn += 'ᾈ'; i++; break;
-                    case 'H': toReturn += 'ῌ'; i++; break;
-                    case 'W': toReturn += 'ῼ'; i++; break;
-                    case 'a': toReturn += 'ᾳ'; i++; break;
-                    case 'á': toReturn += 'ᾁ'; i++; break;
-                    case 'à': toReturn += 'ᾀ'; i++; break;
-                    case 'h': toReturn += 'ῃ'; i++; break;
-                    case 'w': toReturn += 'ῳ'; i++; break;
+                    case 'A': toRet('ᾼ'); i++; break;
+                    case 'Á': toRet('ᾉ'); i++; break;
+                    case 'À': toRet('ᾈ'); i++; break;
+                    case 'H': toRet('ῌ'); i++; break;
+                    case 'W': toRet('ῼ'); i++; break;
+                    case 'a': toRet('ᾳ'); i++; break;
+                    case 'á': toRet('ᾁ'); i++; break;
+                    case 'à': toRet('ᾀ'); i++; break;
+                    case 'h': toRet('ῃ'); i++; break;
+                    case 'w': toRet('ῳ'); i++; break;
                     case "'": i++; iotaSubWithAsper(input[i+1]); break;
                     case '`': i++; iotaSubWithLenis(input[i+1]); break;
-                    default: toReturn += "~";
+                    default: toRet("~");
                 }
             }
             function iotaSubWithAsper(nextChar) {
                 switch (nextChar) {
-                    case 'A': toReturn += 'ᾉ'; i++; break;
-                    case 'H': toReturn += 'ᾙ'; i++; break;
-                    case 'W': toReturn += 'ᾩ'; i++; break;
-                    case 'a': toReturn += 'ᾁ'; i++; break;
-                    case 'h': toReturn += 'ᾑ'; i++; break;
-                    case 'w': toReturn += 'ᾡ'; i++; break;
-                    default: toReturn += '';
+                    case 'A': toRet('ᾉ'); i++; break;
+                    case 'H': toRet('ᾙ'); i++; break;
+                    case 'W': toRet('ᾩ'); i++; break;
+                    case 'a': toRet('ᾁ'); i++; break;
+                    case 'h': toRet('ᾑ'); i++; break;
+                    case 'w': toRet('ᾡ'); i++; break;
+                    default: toRet('');
                 }
             }
             function iotaSubWithLenis(nextChar) {
                 switch (nextChar) {
-                    case 'A': toReturn += 'ᾈ'; i++; break;
-                    case 'H': toReturn += 'ᾘ'; i++; break;
-                    case 'W': toReturn += 'ᾨ'; i++; break;
-                    case 'a': toReturn += 'ᾀ'; i++; break;
-                    case 'h': toReturn += 'ᾐ'; i++; break;
-                    case 'w': toReturn += 'ᾠ'; i++; break;
-                    default: toReturn += '';
+                    case 'A': toRet('ᾈ'); i++; break;
+                    case 'H': toRet('ᾘ'); i++; break;
+                    case 'W': toRet('ᾨ'); i++; break;
+                    case 'a': toRet('ᾀ'); i++; break;
+                    case 'h': toRet('ᾐ'); i++; break;
+                    case 'w': toRet('ᾠ'); i++; break;
+                    default: toRet('');
                 }
             }
 
             function sigmaSigmaOnTheWall(nextChar) {
                 const whoIsTheSkibidiestOfThemAll = [' ', ',', '.', ')', '-']
                 if (whoIsTheSkibidiestOfThemAll.includes(nextChar) || (input.length -1) == i) {
-                    toReturn += 'ς'
+                    toRet('ς');
                 } else {
-                    toReturn += 'σ'
+                    toRet('σ');
                 }
+            }
+
+            function plus() {
+                switch (input[i+1]) {
+                    case 'n': toRet('+nom'); i++; break;
+                    case 'g': toRet('+gen'); i++; break;
+                    case 'd': toRet('+dat'); i++; break;
+                    case 'a': toRet('+acc'); i++; break;
+                    case 'i': toRet('+inf'); i++; break;
+                    case 'p': 
+                        if(input[i+2] == 'p') {
+                            toRet('+ptc prs'); i+=2; 
+                        } else {
+                            toRet('+ptc'); i++;
+                        }
+                        break;
+                
+                    default: toRet('+');
+                }
+            }
+
+            function type() {
+                switch (input[i+1]) {
+                    case 'a': toRet('aor'); i++; break;
+                    case 'b': toRet('bijw'); i++; break;
+                    case 'v': 
+                        if(input[i+2] == 'v') {
+                            toRet('voorvoegsel'); i+=2; 
+                        } else if (input[i+2] == 'w') {
+                            toRet('voegw'); i+=2;
+                        }
+                        break;
+                    case 'm': 
+                        if(input[i+2] == 'v') {
+                            toRet('m/v'); i+=2; 
+                        } else {
+                            toRet('mv'); i++;
+                        }
+                        break;
+                    default: toRet('-');
+                }
+            }
+
+            function ending() {
+                switch (input[i+1]) {
+                    case 'h': toRet('ος, -η, -ον'); i++; break;
+                    case 'a': toRet('ος, -α, -ον'); i++; break;
+                    case 'u': toRet('υς, -εια, -υ'); i++; break;
+                    default: toRet('*');
+                }
+            }
+
+            function escape(nextChar) {
+                toRet(nextChar); i++;
+            }
+
+            function toRet(toRet) {
+                toReturn += toRet;
             }
         }
         
