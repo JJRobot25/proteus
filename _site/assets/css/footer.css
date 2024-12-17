@@ -4,19 +4,19 @@ footer {
 
     color: white;
     text-align: left;
-    padding: 14px 16px;
+    padding: .875em 1em;
     text-decoration: none;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    height: 50px;
+    height: 3.125em;
 }
 
 #myBtn {
     display: none; /* Hidden by default */
-    right: 5px; /* Centered middle */
+    /*right: 5px; /* Centered right */
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
     background-color: red; /* Set a background color */
