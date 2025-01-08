@@ -16,7 +16,7 @@ body {
 body, .dropdown-content {
     font-family: "Gentium Plus", "Newsreader", system-ui;
 }
-h1, h2, h3, h4, nav {
+h1, h2, h3, h4, nav, button {
     font-family: "Modern Antiqua", "Gentium Plus", system-ui;
 }
 
