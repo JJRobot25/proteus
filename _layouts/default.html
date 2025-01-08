@@ -3,17 +3,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>{{page.title}}</title>
+        <title>{{page.title | append: " - Grieks Website"}}</title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="{{'/assets/css/main.css' | relative_url}}">
-        <link rel="stylesheet" href="{{'/assets/css/navbar.css' | relative_url}}">
-        <link rel="stylesheet" href="{{'/assets/css/footer.css' | relative_url}}">
-        <link rel="stylesheet" href="{{'/assets/css/table.css' | relative_url}}">
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Modern+Antiqua|Newsreader|Gentium+Plus">
+        {% include stuff.html %}
     </head>
     <body>
         {% include nav.html %}
