@@ -1,11 +1,13 @@
 <footer>
     <div>
         {% if page.tb %}
-            Tekstboek: p. {{page.tb}}
-            <br><br>
+            <p>Tekstboek: p. {{page.tb}}</p>
         {%endif%}
+        <!--{% if page.tb and page.hbnr and page.hb%}
+        <br>
+        {%endif%}-->
         {% if page.hbnr and page.hb%}
-            Hulpboek {{page.hbnr}}: p. {{page.hb}}
+            <p>Hulpboek {{page.hbnr}}: p. {{page.hb}}</p>
         {%endif%}
 
     </div>

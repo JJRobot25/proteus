@@ -37,3 +37,7 @@ table span.i {
     font-style: italic;
 }
 
+.table-container {
+    overflow-x: auto;
+}
+

@@ -14,10 +14,10 @@ body {
 
 /* Fonts */
 body, .dropdown-content {
-    font-family: "Gentium Plus", "Newsreader", system-ui;
+    font-family: "Gentium Plus", "Newsreader", serif;
 }
 h1, h2, h3, h4, nav, button {
-    font-family: "Modern Antiqua", "Gentium Plus", system-ui;
+    font-family: "Modern Antiqua", "Gentium Plus", serif;
 }
 
 /* Links */
@@ -52,4 +52,47 @@ code {
 img {
     max-height: 400px;
     max-width: 100%;;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 5%
+}
+
+.flex-item {
+    text-align: center;
+    width: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.flex-item a {
+    color: black;
+    background-color: #ccbc6c;
+    width: 60%;
+    padding: .5em;
+    border-radius: .3em;
+    margin: .3em;
+}
+
+.flex-item a:hover {
+    background-color: #b2a45e;
+    text-decoration: none;
+}
+
+.flex-container a:active {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+    .flex-item {
+        width: 80%;
+    }
+
+    .flex-item a {
+        width: 90%;
+    }
 }

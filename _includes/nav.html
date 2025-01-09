@@ -19,41 +19,24 @@
 <!-- Van https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp, de 'responsive' kwam later -->
 
 <nav id="topnav" class="topnav">
-    <a href="{{'/' | relative_url}}">Home</a>
+    <a href="{{'/' | relative_url}}" style="padding: 0.5375em;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.8em" viewBox="0 -960 960 960" width="1.8em" fill="#FFFFFF"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+    </a>
     <a href="{{'/over' | relative_url}}">Over</a>
 
     <a href="{{'/basiskennis' | relative_url}}">Basiskennis</a>
 
     <div class="dropdown">
         <button class="dropbtn">
-            Naamwoorden <b style="font-size: 0.8em;">▼</b>
+            Grammatica <b style="font-size: 0.8em;">▼</b>
         </button>
         <div class="dropdown-content">
-            <a href="{{'/naamwoorden/verbgr' | relative_url}}">ZNW - Verbuigingsgroepen</a>
-            <a href="{{'/naamwoorden/nv' | relative_url}}">ZNW - Naamvallen</a>
-            <a href="{{'/naamwoorden/bnw' | relative_url}}">BNW - Basiskennis</a>
-            <a href="{{'/naamwoorden/bnw/verbgr' | relative_url}}">BNW - Verbuigingsgroepen</a>
-            <a href="{{'/naamwoorden/bnw/bijw' | relative_url}}">BNW - Bijwoord</a>
-            <a href="{{'/naamwoorden/telw' | relative_url}}">Telwoord</a>
-            <a href="{{'/naamwoorden/vnw/persbez' | relative_url}}">VNW - Persoonlijk & Bezittelijk</a>
-            <a href="{{'/naamwoorden/vnw/aanw' | relative_url}}">VNW - Aanwijzend</a>
-            <a href="{{'/naamwoorden/vnw/vraagonbep' | relative_url}}">VNW - Vragend & Onbepaald</a>
-            <a href="{{'/naamwoorden/vnw/betrek' | relative_url}}">VNW - Betrekkelijk</a>
+            <a href="{{'/gram/znw' | relative_url}}">Zelfstandig Naamwoord</a>
+            <a href="{{'/gram/bnw' | relative_url}}">Bijvoeglijk Naamwoord</a>
+            <a href="{{'/gram/ww' | relative_url}}">Werkwoord</a>
         </div>
     </div>
-    
-    <div class="dropdown">
-        <button class="dropbtn">
-            Werkwoord <b style="font-size: 0.8em;">▼</b>
-        </button>
-        <div class="dropdown-content">
-            <a href="{{'/werkwoord/basis' | relative_url}}">Basis</a>
-            <a href="{{'/werkwoord/overzicht-λυω' | relative_url}}">Overzicht λυω</a>
-            <a href="{{'/werkwoord/act' | relative_url}}">Actief</a>
-            <a href="{{'/werkwoord/medpas' | relative_url}}">Medium/Passief</a>
-        </div>
-    </div>
-    
+
     <a href="{{'/transliterator' | relative_url}}">Transliterator</a>
 
     
