@@ -1,28 +1,70 @@
-body {
+:root {
+    /* 
+    == OLD COLORS ==
+    https://www.canva.com/colors/color-wheel/
+
     --bg-color: #ffeb87;
-    /* Old:
-    --nav-color: #a78c02;
-    --nav-accent-color: #02A78C;
-    --table-color: #dc8423;*/
+    
     --nav-color: #806C02;
     --nav-accent-color: #02806C;
-    --table-color: #ac4d04;
 
+    --bg-color-dim: 
+
+    --text-color: black;
+    --text-color-special: #333333;
+    --text-color-alternate: white;
+    --link-color: #1d42ff;
+
+    --menu-btn: #ccbc6c;
+    --menu-hover: #b2a45e;
+    --menu-notdone: #928751;
+
+    --code-bg: #656c7633;
+    */
+    
+    --bg-color: #ffeb87;
+
+    --bg-dim: #ccbc6c;
+    --bg-dimmer: #b2a45e;
+    --bg-dimmerer: #928751;
+
+    --nav-color: #806C02;
+    --nav-accent-color: #02806C;
+
+    --text-color: black;
+    --text-color-special: #4e4e4e;
+    --text-color-alternate: white;
+    --link-color: #1d42ff;
+
+    --code-bg: #656c7633;
+}
+
+/*@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1b1b1b;
+    }
+}*/
+
+body {
     background-color: var(--bg-color);
-    /*https://www.canva.com/colors/color-wheel/*/
 }
 
 /* Fonts */
 body, .dropdown-content {
     font-family: "Gentium Plus", "Newsreader", serif;
+    color: var(--text-color);
 }
 h1, h2, h3, h4, nav, button {
     font-family: "Modern Antiqua", "Gentium Plus", serif;
 }
 
+span {
+    color: var(--text-color-special);
+}
+
 /* Links */
 a {
-    color: #1d42ff;
+    color: var(--link-color);
     text-decoration: none;
 }
 a:hover {
@@ -31,7 +73,7 @@ a:hover {
 
 /* Dikke scheidingsstreep */ 
 hr {
-    height: .19em;
+    height: .1em;
     border-width: 0;
     color: var(--nav-color);
     background-color: var(--nav-color);
@@ -45,7 +87,7 @@ code {
     margin: 0;
     font-size: 85%;
     white-space: break-spaces;
-    background-color: #656c7633;
+    background-color: var(--code-bg);
     border-radius: 0.375em;
 }
 
@@ -72,8 +114,8 @@ img {
 }
 
 .flex-item a {
-    color: black;
-    background-color: #ccbc6c;
+    color: var(--text-color);
+    background-color: var(--bg-dim);
     width: 60%;
     padding: .5em;
     border-radius: .3em;
@@ -81,7 +123,7 @@ img {
 }
 
 .flex-item a:hover {
-    background-color: #b2a45e;
+    background-color: var(--bg-dimmer);
     text-decoration: none;
 }
 
@@ -90,7 +132,7 @@ img {
 }
 
 .flex-item a.niet-gehad {
-    background-color: #928751;
+    background-color: var(--bg-dimmerer);
 }
 
 @media screen and (max-width: 700px) {

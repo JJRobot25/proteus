@@ -2,7 +2,7 @@ footer {
     /*background-color: #C4AC2E;*/
     background-color: var(--nav-color);
 
-    color: white;
+    color: var(--text-color-alternate);
     text-align: left;
     padding: .875em 1em;
     text-decoration: none;
@@ -29,7 +29,7 @@ footer p {
     border-radius: 10px; /* Rounded corners */
 
     font-size: 1.125em;
-    color: white;
+    color: var(--text-color-alternate);
 }
 
 #topBtn:hover {

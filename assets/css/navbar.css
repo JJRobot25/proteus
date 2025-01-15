@@ -5,7 +5,7 @@ nav {
 /* Links inside the navbar */
 nav a {
     float: left;
-    color: white;
+    color: var(--text-color-alternate);
     text-align: center;
     padding: 1em;
     text-decoration: none;
@@ -20,7 +20,7 @@ nav a {
     font-size: 1em;
     border: none;
     outline: none;
-    color: white;
+    color: var(--text-color-alternate);
     padding: 1em;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
@@ -43,7 +43,7 @@ nav a:hover, .dropdown:hover .dropbtn {
 /* Links inside the dropdown */
 .dropdown-content a {
     float: none;
-    color: black;
+    color: var(--text-color);
     padding: .75em 1em;
     text-decoration: none;
     display: block;
