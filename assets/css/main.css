@@ -30,6 +30,8 @@
 
     --nav-color: #806C02;
     --nav-accent-color: #02806C;
+    --nav-dropdown-color: #f9f9f9;
+    --nav-dropdown-color-hover: #ddd;
 
     --text-color: black;
     --text-color-special: #4e4e4e;
@@ -39,11 +41,27 @@
     --code-bg: #656c7633;
 }
 
-/*@media (prefers-color-scheme: dark) {
+/* experimental darkmode
+
+@media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #1b1b1b;
+        --bg-color: #312e1a;
+
+        --bg-dim: #57512e;
+        --bg-dimmer: #7d7542;
+        --bg-dimmerer: #3c3820; /* or #292615? 
+
+        --nav-color: #18160c;
+        --nav-accent-color: #22453f;
+        --nav-dropdown-color: #252525;
+        --nav-dropdown-color-hover: #353535;
+
+        --text-color: white;
+        --text-color-special: #4e4e4e;
+        --text-color-alternate: white;
     }
-}*/
+}
+*/
 
 body {
     background-color: var(--bg-color);
@@ -73,11 +91,7 @@ a:hover {
 
 /* Dikke scheidingsstreep */ 
 hr {
-    height: .1em;
-    border-width: 0;
-    color: var(--nav-color);
-    background-color: var(--nav-color);
-
+    border: 1.5px solid var(--nav-color);
     margin: 1.5em 0;
 }
 
