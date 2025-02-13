@@ -5,9 +5,6 @@ defaults:
     values:
       layout: "default"
 
-plugins:
-  - jekyll-polyglot
-
 domain: jjrobot25.github.io
 url: https://jjrobot25.github.io
 baseurl: /proteus/
