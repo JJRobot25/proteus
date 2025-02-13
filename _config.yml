@@ -4,3 +4,10 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+
+plugins:
+  - jekyll-polyglot
+
+domain: jjrobot25.github.io
+url: https://jjrobot25.github.io
+baseurl: /proteus/
