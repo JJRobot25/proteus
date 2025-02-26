@@ -1,23 +1,3 @@
-<!-- Dit is de navbar aan de bovenkant van iedere pagina.
-
-    Normale link: 
-    <a href="{{'/link' | relative_url}}">Link</a>
-
-    Dropdown: 
-    <div class="dropdown">
-        <button class="dropbtn">
-            Dropdown naam <b style="font-size: 0.8em;">▼</b>
-        </button>
-        <div class="dropdown-content">
-            <a href="{{'/link1' | relative_url}}">Link 1</a>
-            <a href="{{'/link2' | relative_url}}">Link 2</a>
-            <a href="{{'/link3' | relative_url}}">Link 3</a>
-        </div>
-    </div>
--->
-
-<!-- Van https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp, de 'responsive' kwam later -->
-
 <nav id="topnav" class="topnav">
     <a href="{{'/' | relative_url}}" style="padding: 0.5375em;">
         <svg xmlns="http://www.w3.org/2000/svg" height="1.8em" viewBox="0 -960 960 960" width="1.8em" fill="#FFFFFF"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
@@ -28,12 +8,30 @@
 
     <div class="dropdown">
         <button class="dropbtn">
-            Grammatica <b style="font-size: 0.8em;">▼</b>
+            Naamwoord <b style="font-size: 0.8em;">▼</b>
         </button>
         <div class="dropdown-content">
-            <a href="{{'/gram/znw' | relative_url}}">Zelfstandig Naamwoord</a>
-            <a href="{{'/gram/bnw' | relative_url}}">Bijvoeglijk Naamwoord</a>
-            <a href="{{'/gram/ww' | relative_url}}">Werkwoord</a>
+            <a href="{{'/naamwoord/znw' | relative_url}}">Zelfstandig</a>
+            <a href="{{'/naamwoord/bnw' | relative_url}}">Bijvoeglijk</a>
+            <a href="{{'/naamwoord/pers' | relative_url}}">Persoonlijk</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">
+            Werkwoord <b style="font-size: 0.8em;">▼</b>
+        </button>
+        <div class="dropdown-content">
+            <a href="{{'/werkwoord/' | relative_url}}">Werkwoord</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">
+            Meer <b style="font-size: 0.8em;">▼</b>
+        </button>
+        <div class="dropdown-content">
+            <a href="{{'/meer/luw' | relative_url}}">Overzicht λυω</a>
         </div>
     </div>
 

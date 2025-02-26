@@ -9,14 +9,10 @@ footer {
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     height: 3.125em;
-}
-
-footer p {
-    margin: .3em 0;
 }
 
 #topBtn {

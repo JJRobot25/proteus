@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{page.title | append: " - Grieks Website"}}</title>
+    <title>{% if page.difftitle %} {{page.title}} {% else %} {{page.title | append: " - Proteus"}} {%endif%}</title>
 
-    {% include stuff.html %}
+    <meta charset="utf-8">
+        
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{'/assets/images/favicon/apple-touch-icon.png' | relative_url}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{'/assets/images/favicon/favicon-32x32.png' | relative_url}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{'/assets/images/favicon/favicon-16x16.png' | relative_url}}">
+    <link rel="manifest" href="{{'/assets/images/favicon/site.webmanifest' | relative_url}}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{'/assets/css/main.css' | relative_url}}">
+    <link rel="stylesheet" href="{{'/assets/css/navbar.css' | relative_url}}">
+    <link rel="stylesheet" href="{{'/assets/css/footer.css' | relative_url}}">
+    <link rel="stylesheet" href="{{'/assets/css/table.css' | relative_url}}">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Modern+Antiqua|Newsreader|Gentium+Plus">
 </head>
 <body>
-    {% include nav.html %}
-    <h1>{{page.title}}</h1>
-    {{ content }}
-    <br><br><br>
-    {% include footer.html %}
+    <nav id="topnav" class="topnav">
+        <a href="{{'/' | relative_url}}" style="padding: 0.5375em;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1.8em" viewBox="0 -960 960 960" width="1.8em" fill="#FFFFFF"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+        </a>
+        <a href="{{'/over' | relative_url}}">Over</a>
+    
+        <a href="{{'basis/basiskennis' | relative_url}}">Basiskennis</a>
+
+        <a href="{{'/naamwoord/' | relative_url}}">Naamwoord</a>
+
+        <a href="{{'/werkwoord/' | relative_url}}">Werkwoord</a>
+    
+        <a href="{{'/transliterator' | relative_url}}">Transliterator</a>
+    
+        
+        <a href="javascript:void(0);" class="icon" onclick="toggleNav()">&#9776;</a>
+    </nav>
+    <main>
+        {%if page.difftitle %}
+            <div style="margin: auto; text-align: center;">
+                {{ content }}
+            </div>
+        {%else%}
+            <h1>{{page.title}}</h1>
+            {%if page.toc %}
+            <h2>Inhoud</h2>
+            <div id="toc"></div>
+            <hr>
+            {%endif%}
+            <div id="content">
+                {{ content }}
+            </div>
+        {%endif%}
+    </main>
+    {% unless page.difftitle %}
+        <br><br><br>
+        <footer>
+            <button onclick="topFunction()" id="topBtn" title="Naar Top">-𝝙-</button>
+        </footer>
+    {%endunless%}
+
+    <!-- Scripts -->
+    <script src="{{'/assets/js/main.js' | relative_url}}"></script>
 </body>
 </html>

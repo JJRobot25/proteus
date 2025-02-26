@@ -1,4 +1,9 @@
-[ ] Finish reorder plan
-[ ] Reorder
-[ ]
-https://github.com/untra/polyglot
+[x] Finish reorder plan (mostly)
+[x] Reorder current stuff
+[ ] Noun declension
+    [ ] Groep 1
+    [ ] Groep 2
+    [ ] Groep 3
+[ ] Split basiskennis
+    [ ] Alfabet
+    [ ] Lidwoord

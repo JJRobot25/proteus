@@ -7,6 +7,12 @@ textInput.addEventListener('input', function() {
     textOutput.textContent = replaceLetters(textInput.value);
 });
 
+// textInput.addEventListener('keypress', function(event) {
+//     if (event.key === 'Enter') {
+//         navigator.clipboard.writeText(textOutput.textContent)
+//     }
+// })
+
 function replaceLetters(input) {
     let toReturn = '';
     for (let i = 0; i < input.length; i++) {
