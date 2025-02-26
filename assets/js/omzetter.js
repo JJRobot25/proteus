@@ -3,15 +3,22 @@ import letterMap from "./letterMap.js";
 const textInput = document.getElementById('textInput');
 const textOutput = document.getElementById('textOutput');
 
-textInput.addEventListener('input', function() {
-    textOutput.textContent = replaceLetters(textInput.value);
-});
+window.onload = function() {
+    textInput.addEventListener('input', function() {
+        textOutput.textContent = replaceLetters(textInput.value);
+    });
 
-// textInput.addEventListener('keypress', function(event) {
-//     if (event.key === 'Enter') {
-//         navigator.clipboard.writeText(textOutput.textContent)
-//     }
-// })
+    textInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            navigator.clipboard.writeText(textOutput.textContent);
+            textInput.value = '';
+        }
+    })
+}
+
+function updateText(e) {
+    textOutput.textContent = replaceLetters(e.target.value);
+}
 
 function replaceLetters(input) {
     let toReturn = '';
@@ -212,4 +219,3 @@ function replaceLetters(input) {
 
     return toReturn;
 }
-
