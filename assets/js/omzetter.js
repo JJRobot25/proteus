@@ -158,6 +158,7 @@ function replaceLetters(input) {
                     case 'd': toRet('+dat'); i++; break;
                     case 'a': toRet('+acc'); i++; break;
                     case 'i': toRet('+inf'); i++; break;
+                    case 'c': toRet('+con'); i++; break;
                     case 'p': 
                         if(input[i+2] == 'p') {
                             toRet('+ptc prs'); i+=2; 

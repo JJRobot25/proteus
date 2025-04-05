@@ -29,5 +29,5 @@ footer {
 }
 
 #topBtn:hover {
-    background-color: #55555555; /* Add a dark-grey background on hover */
+    background-color: var(--nav-accent-color); /* Add a dark-grey background on hover */
 }

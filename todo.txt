@@ -1,9 +1,17 @@
 [x] Finish reorder plan (mostly)
 [x] Reorder current stuff
 [ ] Noun declension
-    [ ] Groep 1
-    [ ] Groep 2
+    [x] Groep 1
+    [x] Groep 2
     [ ] Groep 3
+[ ] Znw naamvallen
+    [ ] nom
+    [ ] gen
+    [ ] dat
+    [ ] acc
 [ ] Split basiskennis
     [ ] Alfabet
     [ ] Lidwoord
+[ ] Bijv. nw
+    [ ] Verbuiging
+    [ ] 
