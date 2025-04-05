@@ -5,7 +5,7 @@ Zo kunnen de tabellen er uitzien als in het boek (Argo iig)
 */
 
 table {
-    font-size: 0.9em;
+    /* font-size: 0.9em; */
     color: var(--text-color);
     background-color: var(--bg-dimmerer);
 }

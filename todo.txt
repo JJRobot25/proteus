@@ -4,6 +4,8 @@
     [x] Groep 1
     [x] Groep 2
     [ ] Groep 3
+        [x] medeklinker
+        [ ] klinker
 [ ] Znw naamvallen
     [ ] nom
     [ ] gen
@@ -15,3 +17,4 @@
 [ ] Bijv. nw
     [ ] Verbuiging
     [ ] 
+[ ] Coniunctivus
