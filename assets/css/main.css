@@ -127,6 +127,17 @@ img {
 
 .flex-item a {
     color: var(--text-color);
+}
+
+.flex-item h3 > a {
+    text-decoration: underline;
+}
+
+.flex-item h3 > a:hover {
+    text-decoration: none;
+}
+
+.flex-item > a {
     background-color: var(--bg-dim);
     width: 60%;
     padding: .5em;
@@ -134,16 +145,16 @@ img {
     margin: .3em;
 }
 
-.flex-item a:hover {
+.flex-item > a:hover {
     background-color: var(--bg-dimmer);
     text-decoration: none;
 }
 
-.flex-container a:active {
+.flex-container > a:active {
     text-decoration: underline;
 }
 
-.flex-item a.niet-gehad {
+.flex-item > a.niet-gehad {
     background-color: var(--bg-dimmerer);
 }
 
@@ -152,7 +163,7 @@ img {
         width: 80%;
     }
 
-    .flex-item a {
+    .flex-item > a {
         width: 90%;
     }
 }

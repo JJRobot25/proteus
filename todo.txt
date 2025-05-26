@@ -18,3 +18,9 @@
     [ ] Verbuiging
     [ ] 
 [ ] Coniunctivus
+[ ] Optativus
+[ ] Ind met an
+
+Idee ww:
+- Vertalingwijzen bij hoofdpagina (ind, con, opt, imp)
+- Vorming op losse pagina (bijv. ind/prs, con/aor, etc.)
