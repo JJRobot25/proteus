@@ -1,0 +1,28 @@
+---
+title: Transliterator list tool
+---
+
+<input type="text" id="textInput" placeholder="Typ hier!">
+
+<div id="textOutput" >
+    hier komt tekst
+</div>
+
+<hr>
+
+<div>
+    <input type="text" id="wordSep" placeholder="scheiding woorden" style="width: 10em;">
+    <input type="text" id="pairSep" placeholder="scheiding paren" style="width: 10em;">
+    <button id="copyList" style="padding: 12px 5px;">Kopieer lijst</button>
+    <p>Scheiding kan ook <code>tab</code> of <code>enter</code> zijn.</p>
+</div>
+
+<hr>
+
+<table id="listTable">
+    <tr><th>woord</th><th>definitie</th></tr>
+</table>
+
+
+
+<script type="module" src="{{'/assets/js/list_tool.js' | relative_url}}"></script>
